@@ -1,19 +1,14 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Feb 13 18:03:28 2023
-
 @author: Matheus
 """
-
-
 import tkinter as tk
 from tkinter import *
-
 
 LARGE_FONT= ("Verdana", 12)
 NORM_FONT= ("Verdana", 10)
 SMALL_FONT= ("Verdana", 8)
-
 k = 1
 a = 1
 I_value = 1
@@ -44,7 +39,6 @@ def calc():
 def choose_charac(carac):
     global charac
     charac = carac    
-    
 
 window = Tk()
 window.title("Overcurrent calculator")
@@ -56,29 +50,17 @@ line1.grid(row=1, column=0)
 options = ["Normally Inverse", "Very Inverse", "Extremely Inverse", "Long Time"]
 value_menu = StringVar(value='---')
 menu = OptionMenu(frame1, value_menu, *options).grid(row=2, column=0)
-
 line2 = tk.Label(frame1, text="Please enter a time multiplier (k): \n").grid(row=3, column=0)
 TMS_input = tk.Entry(frame1)
 TMS_input.grid(row=4, column=0)
-
 line3 = tk.Label(frame1, text="Please enter a current multiplier (I/In): \n").grid(row=5, column=0)
 I_input = tk.Entry(frame1)
 I_input.grid(row=6, column=0)
-
-
 line4 = tk.Label(frame1, text="The operation time is (s):").grid(row=10, column=0)
-
 result = Label(frame1, text="")
 result.grid(row=11, column=0)
-
-botao = Button(frame1, text = "Calculate", command = lambda: calc()).grid(row=9, column=0)
-
-
+button = Button(frame1, text = "Calculate", command = lambda: calc()).grid(row=9, column=0)
 signature = tk.Label(frame1, text="Developed by: Matheus Ruan Zimmermann - v1.0")
 signature.grid(row=15, column=0, sticky= "sw")
-
 frame1.grid()
 window.mainloop()
-
-
-    
